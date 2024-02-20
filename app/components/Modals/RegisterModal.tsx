@@ -2,7 +2,6 @@
 
 import React, { FC, useCallback, useState } from "react";
 import axios from "axios";
-import { AiFillFacebook } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
 import { Field, FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import useRegisterModal from "@/app/hooks/useRegisterModal";
@@ -11,6 +10,7 @@ import Heading from "../Heading";
 import Input from "../Inputs/Input";
 import toast from "react-hot-toast";
 import Button from "../Button";
+import { FaFacebook } from "react-icons/fa";
 
 const RegisterModal: FC = () => {
   const registerModal = useRegisterModal();
@@ -83,6 +83,30 @@ const RegisterModal: FC = () => {
         icon={FcGoogle}
         onClick={() => {}}
       />
+      <Button
+        outline
+        label="Continue with Facebook"
+        icon={FaFacebook}
+        onClick={() => {}}
+      />
+      <div
+        className="
+      text-neutral-500
+      text-center
+      mt-4
+      font-light
+      "
+      >
+        <div className="justify-center flex flex-row items-center gap-2">
+          <div>Already have an account ?</div>
+          <div
+            className="text-neutral-800 cursor-pointer hover:underline"
+            onClick={registerModal.onClose}
+          >
+            Login
+          </div>
+        </div>
+      </div>
     </div>
   );
 
