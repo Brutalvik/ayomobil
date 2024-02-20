@@ -2,6 +2,6 @@
 
 export default function Home() {
   return (
-    <div>Ayo Mobil</div>
+    <div className="text-black-500 text-2xl">AyoMobil</div>
   );
 }
