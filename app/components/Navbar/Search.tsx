@@ -1,12 +1,12 @@
-'use client'
+"use client";
 
-import React, {FC} from 'react'
-import { BiSearch } from 'react-icons/bi'
+import React, { FC } from "react";
+import { BiSearch } from "react-icons/bi";
 
 const Search: FC = () => {
   return (
     <div
-        className='
+      className="
         border-[1px]
         w-auto
         py-2
@@ -15,23 +15,25 @@ const Search: FC = () => {
         hover:shadow-md
         transition
         cursor-pointer
-        '
+        "
     >
-        <div className="flex flex-row items-center justify-between">
-            <div className="text-sm font-semibold px-6">
-              Anywhere  
-            </div>
-            <div className="sm-block text-sm font-semibold px-6 border-x-[1px] flex-1 text-center">
-                Any week
-            </div>
-            <div className="text-sm pl-6 pr-2 text-gray-600 flex flex-row items-center gap-3">
-              <div className=" sm:block">Add Guests</div>  
-              <div className="p-2 bg-slate-700
-              rounded-full text-white"><BiSearch/></div>
-            </div>
+      <div className="flex flex-row items-center justify-between">
+        <div className="text-sm font-semibold px-6">Where</div>
+        <div className="hidden sm:block text-sm font-semibold px-6 border-x-[1px] flex-1 text-center">
+          From
         </div>
+        <div className="text-sm pl-6 pr-2 text-gray-600 flex flex-row items-center gap-3">
+          <div className="hidden sm:block">To</div>
+          <div
+            className="p-2 bg-slate-700
+              rounded-full text-white"
+          >
+            <BiSearch size={18} />
+          </div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Search
+export default Search;
