@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
 import RegisterModal from "./components/Modals/RegisterModal";
 import ToasterProvider from "./Providers/ToasterProvider";
+import LoginModal from "./components/Modals/LoginModal";
 
 export const metadata: Metadata = {
   title: "AyoMobil",
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={font.className}>
         <ToasterProvider />
+        <LoginModal />
         <RegisterModal />
         <Navbar />
         {children}
