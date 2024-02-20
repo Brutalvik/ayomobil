@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import {Nunito} from "next/font/google"
+import { Nunito } from "next/font/google";
 import "./globals.css";
 
 //Components
-import Navbar from "./components/Navbar/Navbar"
+import Navbar from "./components/Navbar/Navbar";
+import Modal from "./components/Modals/Modal";
 
 export const metadata: Metadata = {
   title: "AyoMobil",
@@ -11,8 +12,8 @@ export const metadata: Metadata = {
 };
 
 const font = Nunito({
-  subsets: ["latin"]
-})
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -22,9 +23,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={font.className}>
+        <Modal isOpen title="Login" />
         <Navbar />
         {children}
-        </body>
+      </body>
     </html>
   );
 }
