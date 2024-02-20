@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import {Nunito} from "next/font/google"
 import "./globals.css";
 
+//Components
+import Navbar from "./components/Navbar/Navbar"
+
 export const metadata: Metadata = {
   title: "AyoMobil",
   description: "Peer-to-peer car sharing app",
@@ -18,7 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={font.className}>
+        <Navbar />
+        {children}
+        </body>
     </html>
   );
 }
