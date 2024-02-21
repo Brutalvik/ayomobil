@@ -10,6 +10,7 @@ import Logo from "./Logo";
 import Search from "./Search";
 import UserMenu from "./UserMenu";
 import { SafeUser } from "@/app/types";
+import Categories from "./Categories";
 
 const Navbar: FC<NavbarProps> = ({ currentUser }) => {
   return (
@@ -23,6 +24,7 @@ const Navbar: FC<NavbarProps> = ({ currentUser }) => {
           </div>
         </Container>
       </div>
+      <Categories />
     </div>
   );
 };

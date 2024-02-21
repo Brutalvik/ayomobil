@@ -11,6 +11,7 @@ import Input from "../Inputs/Input";
 import toast from "react-hot-toast";
 import Button from "../Button";
 import { FaFacebook } from "react-icons/fa";
+import { signIn } from "next-auth/react";
 
 const RegisterModal: FC = () => {
   const registerModal = useRegisterModal();
@@ -25,6 +26,7 @@ const RegisterModal: FC = () => {
       name: "",
       email: "",
       password: "",
+      phone: "",
     },
   });
 
@@ -63,6 +65,14 @@ const RegisterModal: FC = () => {
         required
       />
       <Input
+        id="phone"
+        label="Phone"
+        disabled={isLoading}
+        register={register}
+        errors={errors}
+        required
+      />
+      <Input
         id="password"
         type="password"
         label="Password"
@@ -81,14 +91,14 @@ const RegisterModal: FC = () => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn("google")}
       />
-      <Button
+      {/* <Button
         outline
         label="Continue with Facebook"
         icon={FaFacebook}
         onClick={() => {}}
-      />
+      /> */}
       <div
         className="
       text-neutral-500

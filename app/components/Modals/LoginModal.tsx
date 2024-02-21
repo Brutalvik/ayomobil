@@ -77,14 +77,14 @@ const LoginModal: FC = () => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn("google")}
       />
-      <Button
+      {/* <Button
         outline
         label="Continue with Facebook"
         icon={FaFacebook}
         onClick={() => {}}
-      />
+      /> */}
       <div
         className="
       text-neutral-500
@@ -94,12 +94,12 @@ const LoginModal: FC = () => {
       "
       >
         <div className="justify-center flex flex-row items-center gap-2">
-          <div>Already have an account ?</div>
+          <div>Don't have an account ?</div>
           <div
             className="text-neutral-800 cursor-pointer hover:underline"
-            onClick={registerModal.onClose}
+            onClick={loginModal.onClose}
           >
-            Login
+            Sign Up
           </div>
         </div>
       </div>
